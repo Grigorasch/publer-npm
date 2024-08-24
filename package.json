@@ -1,0 +1,46 @@
+{
+  "name": "publer",
+  "version": "0.0.0",
+  "description": "publer will take care of the cleanliness of your module when publishing it to npm. For publication, a separate publication is created, in which only the necessary files are placed, with cleaned content",
+  "bin": {
+    "publer": "./bin/cli.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grigorasch",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grigorasch/publer-npm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Grigorasch/publer-npm/issues"
+  },
+  "homepage": "https://github.com/Grigorasch/publer-npm#readme",
+  "publer": {
+    "outDir": "dist",
+    "include": [
+      "*.js"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "*.test.js"
+    ],
+    "package": {
+      "include": [],
+      "exclude": [
+        "publer",
+        "devDependencies",
+        "main"
+      ]
+    }
+  }
+}
